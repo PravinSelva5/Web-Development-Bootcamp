@@ -1,0 +1,9 @@
+Using Github to host your website
+
+- Create a repository for your website
+    - Make it a public repo and Initialize this repo with a README
+- Upload all your files related to you website
+  - Commit Changes
+- Settings -> scroll down to Github Pages
+  - Source -> master/branch - > save
+  - You'll get a link to where your website is being published
