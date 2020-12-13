@@ -1,0 +1,21 @@
+/* TAG SELECTORS */
+
+h1 {
+  color: red;
+  font-size: 200px;
+}
+
+
+/* CLASS SELECTORS */
+
+.bacon {
+  background-color: green;
+}
+
+/* ID SELECTORS
+    - You can't have more than one ID for an element like you can with classes
+ */
+
+#heading {
+  color:blue;
+}
