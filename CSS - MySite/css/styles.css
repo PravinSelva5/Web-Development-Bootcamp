@@ -1,3 +1,36 @@
-div{
+.top-container{
   background-color: #E4F9F5;
 }
+
+.middle-container {
+  height: 200px;
+  width:200px;
+  background-color:red;
+
+}
+
+.bottom-container {
+  height: 200px;
+  width:200px;
+  background-color:blue;
+
+}
+
+
+/*
+CSS
+
+- Display Property = inline ( you can't change the width ), block (take up whole witdth of screen), inline-block (best of both worlds), None (gets rid of element)
+
+- Visibility can be used to disapper an element without affecting its position
+
+- Position: static (default),
+            relative
+              - relative to how it would have been postiioned if static. Any changes to element doesn't affect other elements around it.),
+            absolute
+              - positioning element relative to its parent.
+            fixed
+              - 
+
+- Coordinates: top, bottom, left, right
+*/
