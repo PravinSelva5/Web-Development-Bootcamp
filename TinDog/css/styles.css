@@ -2,6 +2,12 @@ body {
   font-family: 'Montserrat-Regular', sans-serif;
 }
 
+h2 {
+  font-family: "Montserrat-Bold";
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
 .container-fluid {
   padding: 3% 15%;
 }
@@ -49,4 +55,83 @@ body {
 .title-image{
   width:60%;
   transform: rotate(25deg)
+}
+
+
+
+/* Features Section */
+
+#features {
+  font-family: "Montserrat-Bold";
+  padding: 7% 15%;
+}
+
+.features-center {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+.features-bold-font {
+  font-family: "Montserrat-Bold";
+  line-height: 1.5;
+}
+
+.features-p {
+  font-family: "Montserrat-Light";
+  color: #8f8f8f;
+}
+.checkmark {
+  color: #ef8172;
+  padding-bottom: 10px;
+}
+
+.checkmark:hover {
+  color: #ff4c68;
+}
+
+.bullseye {
+  color: #ef8172;
+  padding-bottom: 10px;
+}
+.bullseye:hover {
+  color: #ff4c68;
+}
+
+.heart {
+  color: #ef8172;
+  padding-bottom: 10px;
+}
+.heart:hover {
+  color: #ff4c68;
+}
+
+/* Testimonal Section */
+
+#testimonials {
+  text-align: center;
+  background-color:  #ef8172;
+  color: #fff;
+}
+
+.testimonal-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* Press Section */
+
+#press {
+  background-color: #ef8172;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+.carousel-item {
+  padding: 7% 15%;
 }
