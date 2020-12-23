@@ -8,6 +8,7 @@ h2 {
   line-height: 1.5;
 }
 
+
 .container-fluid {
   padding: 3% 15% 7%;
 }
@@ -15,16 +16,13 @@ h2 {
 .intro {
   font-family: 'Montserrat', sans-serif;
   font-size: 3.5rem;
-  line-height:1.5;
+  line-height: 1.5;
 }
-
-
 
 #title {
   background-color: #ff4c68;
   color: #fff;
 }
-
 
 /* Navigation Bar */
 .navbar {
@@ -32,9 +30,9 @@ h2 {
 }
 
 .navbar-brand {
-  font-family:"Ubuntu";
+  font-family: "Ubuntu";
   font-size: 2.5rem;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .nav-item {
@@ -48,21 +46,18 @@ h2 {
 
 /* Download Buttons */
 .download-button {
-    margin: 5% 3% 5% 0;
+  margin: 5% 3% 5% 0;
 }
 
 /* Title Image */
-.title-image{
-  width:60%;
+.title-image {
+  width: 60%;
   transform: rotate(25deg);
   position: absolute;
   right: 30%;
 }
 
-
-
 /* Features Section */
-
 #features {
   font-family: "Montserrat-Bold";
   padding: 7% 15%;
@@ -76,6 +71,7 @@ h2 {
   padding: 10px;
   margin-bottom: 0px;
 }
+
 .features-bold-font {
   font-family: "Montserrat-Bold";
   line-height: 1.5;
@@ -85,6 +81,7 @@ h2 {
   font-family: "Montserrat-Light";
   color: #8f8f8f;
 }
+
 .checkmark {
   color: #ef8172;
   padding-bottom: 10px;
@@ -98,6 +95,7 @@ h2 {
   color: #ef8172;
   padding-bottom: 10px;
 }
+
 .bullseye:hover {
   color: #ff4c68;
 }
@@ -106,15 +104,15 @@ h2 {
   color: #ef8172;
   padding-bottom: 10px;
 }
+
 .heart:hover {
   color: #ff4c68;
 }
 
 /* Testimonal Section */
-
 #testimonials {
   text-align: center;
-  background-color:  #ef8172;
+  background-color: #ef8172;
   color: #fff;
 }
 
@@ -125,7 +123,6 @@ h2 {
 }
 
 /* Press Section */
-
 #press {
   background-color: #ef8172;
   text-align: center;
@@ -141,9 +138,7 @@ h2 {
   padding: 7% 15%;
 }
 
-
 /* Pricing Section  */
-
 #pricing {
   padding: 100px;
 }
@@ -151,3 +146,53 @@ h2 {
 .pricing-column {
   padding: 3% 2%;
 }
+
+/* Call for Action */
+#cta {
+  background-color: #ff4c68;
+  text-align: center;
+  padding: 7% 15%;
+}
+
+.cta-message {
+  font-family: "Montserrat-Bold";
+  color: #fff;
+  font-size: 3.5rem;
+}
+
+/* Footer */
+#footer {
+  background-color: #fff;
+  padding: 7% 15%;
+  text-align: center;
+}
+
+.social-media-icons {
+  margin: 20px 10px;
+}
+
+/* For fine tuning, usually use media-queries */
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
+
+
+
+/*
+CODE REFACTORING: ORDER OF IMPORTANCE
+
+1. Readability
+2. Modularity
+3. Efficiency
+4. Length
+
+
+
+/*
