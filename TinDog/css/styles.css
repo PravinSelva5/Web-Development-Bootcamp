@@ -25,6 +25,7 @@ h2 {
 }
 
 /* Navigation Bar */
+
 .navbar {
   padding: 0 0 4.5rem 0;
 }
@@ -58,6 +59,7 @@ h2 {
 }
 
 /* Features Section */
+
 #features {
   font-family: "Montserrat-Bold";
   padding: 7% 15%;
@@ -110,9 +112,11 @@ h2 {
 }
 
 /* Testimonal Section */
+
+
 #testimonials {
   text-align: center;
-  background-color: #ef8172;
+  background-color: #ff4c68;
   color: #fff;
 }
 
@@ -123,8 +127,10 @@ h2 {
 }
 
 /* Press Section */
+
+
 #press {
-  background-color: #ef8172;
+  background-color: #ff4c68;
   text-align: center;
   padding-bottom: 3%;
 }
@@ -139,6 +145,8 @@ h2 {
 }
 
 /* Pricing Section  */
+
+
 #pricing {
   padding: 100px;
 }
@@ -148,6 +156,8 @@ h2 {
 }
 
 /* Call for Action */
+
+
 #cta {
   background-color: #ff4c68;
   text-align: center;
@@ -161,6 +171,8 @@ h2 {
 }
 
 /* Footer */
+
+
 #footer {
   background-color: #fff;
   padding: 7% 15%;
@@ -172,6 +184,8 @@ h2 {
 }
 
 /* For fine tuning, usually use media-queries */
+
+
 @media (max-width: 1028px) {
   #title {
     text-align: center;
@@ -194,5 +208,34 @@ CODE REFACTORING: ORDER OF IMPORTANCE
 4. Length
 
 
+CSS Selectors
+
+----------------------
+multiple selectors:
+----------------------
+
+h1, h2, h3, h3 {
+  color: blue;
+}
+
+------------------------
+hierarchical selectors
+------------------------
+- Read this from left to right, where #title is the child and .container-fluid is the parent
+
+.container-fluid #title {
+  color: blue;
+}
+
+----------------------
+Combined selectors
+----------------------
+
+- When there's no space, you read it from left to right
+- all the classes or IDs used in a combined selector need to be part of the same html element
+
+selector1.selector2 {
+  color: blue;
+}
 
 /*
