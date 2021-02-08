@@ -8,7 +8,7 @@ const app = express();
 app.get("/", function(req, res){
     
     const query = "London";
-    const apiKey = "2df9c664dd26010d7629f1f79344b6d2";
+    
     const unit = "metric";
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=" + unit;
     
