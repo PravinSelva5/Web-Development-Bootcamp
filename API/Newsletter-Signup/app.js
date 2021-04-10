@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require('https');
 
+
 const app = express();
 
 app.use(express.static("public"));
@@ -33,16 +34,28 @@ app.post('/', function(req, res){
         ]
     };
 
+    app.post("/failure", function(req, res){
+        res.redirect("/");
+    });
+
     const jsonData = JSON.stringify(data);
     
     const url = 'https://us1.api.mailchimp.com/3.0/lists/5003c42f99';
 
     const options = {
         method: "POST",
-        auth: "pravin14:2e9c668ca9d215502983f35bbfb71498-us1"
+        auth: "pravin14:3ab5f76c1ee2cb1f1f78575cb22617b3-us1jdhfajkdhfklajdfl;k"
     }
 
     const request = https.request(url, options, function(response){
+
+        if  (response.statusCode === 200){
+            res.sendFile(__dirname + "/success.html");
+        } else {
+            res.send(__dirname + "/failure.html");
+        }
+        
+        
         response.on("data", function(data){
             console.log(JSON.parse(data));
         })
