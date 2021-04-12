@@ -11,3 +11,15 @@
 
 - you need to write the exact casing of the files, one file per line
 - you can use the "#" to comment
+
+
+------------
+ git clone
+------------
+- git clone can be used to grab repo from github to local folder on your computer --> " git clone <link from github>"
+
+
+
+--------------------
+Branching & Merging
+--------------------
