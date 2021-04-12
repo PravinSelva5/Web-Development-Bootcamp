@@ -1,0 +1,13 @@
+------------ 
+   Notes
+------------
+- "git init" is used to initializing a new repo to git
+
+------------ 
+ git ignore
+------------
+- "touch .gitignore" line is used to add files that should be ignored when commiting to git. For example, if you have any files with confidential information like api keys, you can add the file name into 
+   the git ignore file.
+
+- you need to write the exact casing of the files, one file per line
+- you can use the "#" to comment
