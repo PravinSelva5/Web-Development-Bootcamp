@@ -27,3 +27,15 @@ Branching & Merging
  "git branch <name of new branch>"
 
  "git branch" --> to check which branches you currently have, the * indicates which branch you're currently on
+
+ when you want to merge your branch with the master node:
+"git merge <branch name>" --  it'll open up vim, leave it empty and write ":q!"
+
+
+then you can push it with:  "git push origin master -u"
+
+
+--------------------------
+Forking and Pull Requests
+--------------------------
+
