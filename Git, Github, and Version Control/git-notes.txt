@@ -23,3 +23,7 @@
 --------------------
 Branching & Merging
 --------------------
+ 
+ "git branch <name of new branch>"
+
+ "git branch" --> to check which branches you currently have, the * indicates which branch you're currently on
