@@ -39,3 +39,6 @@ then you can push it with:  "git push origin master -u"
 Forking and Pull Requests
 --------------------------
 
+- forking is taking a copy of a repository to your remote repo and making changes that don't affect the original repo you forked it from.
+- Once you forked, you can clone it to your local repository
+- If you want to tell the original owner to add your changes to the original repo, then you need to run a "pull request"
