@@ -11,10 +11,13 @@ app.get("/", function(req, res){
 
     var today = new Date();
     var currentDay = today;
+    var day = "";
 
     if (currentDay === 6 || currentDay === 0){
-        res.send("<h1>Yay it's the weekend!</h1>")
+        day = "Weekend";
+        res.render('list', )
     } else {
+        day = "Weekday";
         res.sendFile(__dirname + "/index.html");
     }
 })
