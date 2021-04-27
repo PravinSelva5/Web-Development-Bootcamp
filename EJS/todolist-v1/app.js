@@ -3,55 +3,42 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+var items = ["Buy Food", "Cook Food", "Eat Food"];
+
 
 const app = express();
 
 app.set('view engine', 'ejs');
 
+app.use(bodyParser.urlencoded({extended:true}));
+
 app.get("/", function(req, res){
 
     var today = new Date();
-    var currentDay = today.getDay();
-    var day = "";
+    
+    var options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long"
+    };
 
-    switch (currentDay){
-        case 0:
-            day = "Sunday";
-            break;
-        case 1:
-            day = "Monday";
-            break;
-
-        case 2:
-            day = "Tuesday";
-            break;
-
-        case 3:
-            day = "Wednesday";
-            break;
-
-        case 4:
-            day = "Thursday";
-            break;
-
-        case 5:
-            day = "Friday";
-            break;
-
-        case 6:
-            day = "Saturday";
-            break;
-        
-            default:
-                console.log("Error: current day is equal to: " + currentDay);
-        
-    }
-
+    var day = today.toLocaleDateString("en-US", options);
     
     res.render('list', 
     
-        {day: day});
-})
+        { day: day, newListItems: items});
+});
+
+app.post('/', function(req, res){
+      var item = req.body.newItem;
+      items.push(item);
+
+    res.redirect("/");
+    
+});
+
+
+
 
 // You can use res.write() if you need to send more than one HTML tags.
 // Once you write all your res.write(), you can end it with res.send()
