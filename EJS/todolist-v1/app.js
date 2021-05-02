@@ -4,29 +4,23 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { ReactSurveyElement } = require('survey-react');
 var React = require('react');
+const date = require(__dirname + "/date.js"); // Need to use this format because the module we are trying to use is local
 
-let items = ["Buy Food", "Cook Food", "Eat Food"];
-let workItems = [];
+
+const items = ["Buy Food", "Cook Food", "Eat Food"];
+const workItems = [];
 
 const app = express();
 
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.ur ncoded({extended:true}));
 app.use(express.static("public"));
 
 app.get("/", function(req, res){
 
-    let today = new Date();
-    
-    let options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long"
-    };
+    const day = date.getDate();
 
-    let day = today.toLocaleDateString("en-US", options);
-    
     res.render('list', 
     
         { listTitle: day, newListItems: items});
@@ -34,7 +28,7 @@ app.get("/", function(req, res){
 
 app.post('/', function(req, res){
 
-      let item = req.body.newItem;
+      const item = req.body.newItem;
 
       if (req.body.list === "Work"){
           workItems.push(item);
@@ -56,7 +50,7 @@ app.get("/work", function (req, res){
 
 
 app.post("/work", function(req, res){
-    let item = req.body.newItem;
+    const item = req.body.newItem;
     workItems.push(item);
     res.redirect("/work");
 });
