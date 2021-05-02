@@ -3,6 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { ReactSurveyElement } = require('survey-react');
+var React = require('react');
 
 let items = ["Buy Food", "Cook Food", "Eat Food"];
 let workItems = [];
