@@ -17,11 +17,29 @@ app.use(express.static("public"));
 
 
 
+//--- HOME PAGE ----- //
 app.get("/", function(req, res){
     res.render('home.ejs',
       {homeStartingContent: homeStartingContent}
     );
 });
+
+
+//--- ABOUT PAGE ----- //
+app.get("/about", function(req, res){
+  res.render('about.ejs',
+    {aboutContent: aboutContent}
+  );
+});
+
+
+//--- CONTACT PAGE ----- //
+app.get("/contact", function(req, res){
+  res.render('contact.ejs',
+    {contactContent: contactContent}
+  );
+});
+
 
 
 
