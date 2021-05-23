@@ -25,7 +25,7 @@ client.connect(function(err){
 });
 
 const insertDocuemnts = funciton(db, callback){
-    // Get the documents collection
+    // Get the documents collection  /////  NOT SURE WHAT THE ERROR IS?
     const collection = db.collection('fruits');
 
     // Insert some documents
