@@ -38,7 +38,7 @@ const mango = new Fruit ({
 });
 
 //pineapple.save();
-mango.save();
+//mango.save();
 
 
 const personSchema = new mongoose.Schema({
@@ -65,7 +65,7 @@ Person.updateOne({name: "Amy"}, {favouriteFruit: mango}, function(err){
 });
 
 //fruit.save();
-  person.save();
+ // person.save();
 
 
 // Reading from our database with Mongoose
