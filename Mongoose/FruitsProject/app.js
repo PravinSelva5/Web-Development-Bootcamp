@@ -25,21 +25,47 @@ const fruit = new Fruit ({
     review: "Pretty solid as a fruit."
 });
 
+const pineapple = new Fruit ({
+    name: "Pineapple",
+    score: 9,
+    review: "Great fruit!"
+});
+
+const mango = new Fruit ({
+    name: "Mango",
+    score: 7,
+    review: "Great fruit!"
+});
+
+//pineapple.save();
+mango.save();
+
 
 const personSchema = new mongoose.Schema({
     name: String,
-    age: Number
+    age: Number,
+    favouriteFruit: fruitSchema
 });
 
 const Person = mongoose.model("Person", personSchema);
 
-const person = new Person ({
-    name: "John",
-    age: 37
+
+/* const person = new Person({
+    name:"John",
+    age: 37,
+    
+}); */
+
+Person.updateOne({name: "Amy"}, {favouriteFruit: mango}, function(err){
+    if (err){
+        console.log(err);
+    } else {
+        console.log("document has been updated.");
+    }
 });
 
-fruit.save();
-//person.save();
+//fruit.save();
+  person.save();
 
 
 // Reading from our database with Mongoose
@@ -54,3 +80,34 @@ Fruit.find(function(err, fruits){
         });
     }
 });
+
+/*
+// Updating in mongoose
+Fruit.updateOne({_id: "60aa990bb55af1170ee6d3bf"}, {name: "Red Apples"}, function(err){
+    if (err){
+        console.log(err);
+    } else {
+        console.log("Successfully updated the document.")
+    }
+});
+*/
+
+// Deleting in mongoose
+
+/* Fruit.deleteOne({name: "Red Apples"}, function(err){
+    if (err){
+        console.log(err);
+    } else {
+        console.log("Successfully deleted the document");
+    }
+}); */
+
+// Deleting Many in mongoose
+
+Person.deleteMany({name: "John"}, function(err){
+    if (err){
+        console.log(err);
+    } else {
+        console.log("Successfully deleted all the documents!");
+    }
+})
