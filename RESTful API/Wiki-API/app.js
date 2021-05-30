@@ -22,6 +22,37 @@ const articleSchema = new mongoose.Schema({
 const Article = mongoose.model("Article", articleSchema);
 
 
+// GET ALL ARTICLES SECTION 
+
+app.get('/articles', function(req, res){
+    Article.find(function(err, foundArticles){
+        if (!err){
+            res.send(foundArticles);
+        } else {
+            res.send(err);
+        }
+        
+    });
+});
+
+
+// POST ARTICLE SECTION
+
+app.post("/articles", function(req, res){
+    const newArticle = new Article({
+        title: req.body.title,
+        content: req.body.content
+    });
+
+    newArticle.save(function (err){
+        if (!err){
+            res.send("Successfully added a new article");
+        } else {
+            res.send(err);
+        }
+    });
+});
+
 
 
 app.listen(3000, function() {
