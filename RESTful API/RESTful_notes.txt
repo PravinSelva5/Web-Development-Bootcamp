@@ -1,0 +1,9 @@
+--------------------
+ HTTP REQUEST VERBS
+--------------------
+GET -- READING 
+POST -- CREATE
+PUT  -- UPDATE, updating database by entering a new set of data to replace the old one    
+PATCH -- UPDATE, updating the portion of the data that needs to be changed
+DELETE -- DELETE
+
