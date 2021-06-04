@@ -1,0 +1,7 @@
+# Dependency Libraries
+node_modules/
+
+
+
+# dotenv environment files
+.env
